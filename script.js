@@ -6,14 +6,14 @@ const compscore = document.querySelector(".compscore h2");
 let userscorevalue = 0;
 let computerscorevalue = 0;
 
-const computerwin = () => {
-    output.innerText = "Computer wins";
+const computerwin = (ch) => {
+    output.innerText = `Computer wins || Computer choice - ${ch}`;
     computerscorevalue += 1;
     compscore.innerText=computerscorevalue;
     outputsection.style.backgroundColor="red";
 }
-const userwin = () =>{
-    output.innerText = "You win";
+const userwin = (ch) =>{
+    output.innerText = `You win || Computer choice - ${ch}`;
     userscorevalue += 1;
     userscore.innerText=userscorevalue;
     outputsection.style.backgroundColor="green";
@@ -37,23 +37,23 @@ const playgame = (userchoice) =>{
    }else{
    if(userchoice=="rock"){
         if(compchoice=="paper"){
-           computerwin();
+           computerwin("paper");
         }else{
-           userwin();
+           userwin("scissor");
         }
    }
    else if(userchoice =="paper"){
     if(compchoice=="scissor"){
-        computerwin();
+        computerwin("scissor");
     }else{
-        userwin();
+        userwin("rock");
     }
 }
     else{
         if(compchoice=="rock"){
-            computerwin();
+            computerwin("rock");
         }else{
-            userwin();
+            userwin("paper");
         }
     }
 }

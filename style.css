@@ -16,12 +16,20 @@ main{
     align-items: center;
     justify-content: space-around;
 }
+.head{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(36, 36, 180);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
 .choices{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
-
 }
 .choices img{
     width: 20%;
